@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        Welcome to {{title}}!
+    </h1>
+</div>
+
+
+<div class="panel panel-default col-xs-3" *ngFor="let list of localVar1">
+     <div class="panel-body">
+        <table class="table table-striped  table-bordered">
+            <tr>
+                <td>Id:</td>
+                <td>{{list.id}}</td>
+            </tr>
+            <tr>
+                <td>User Id:</td>
+                <td>{{list.userId}}</td>
+            </tr>
+            <tr>
+                <td>Title:</td>
+                <td>{{list.title}}</td>
+            </tr>
+            <tr>
+                <td>Status:</td>
+                <td>{{list.completed}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center"> 
+                    <input type="button" value="View todo" class="btn btn-primary"/>      
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>

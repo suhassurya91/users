@@ -1,13 +1,64 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <h1>
+        Welcome to {{title}}!
+    </h1>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li *ngFor="let list of users">
-  </li>
-</ul>
+<div class="panel panel-default col-xs-3" *ngFor="let list of localVar">
+     <div class="panel-body">
+        <table class="table table-striped  table-bordered">
+            <tr>
+                <td>Id:</td>
+                <td>{{list.id}}</td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>{{list.name}}</td>
+            </tr>
+            <tr>
+                <td>UserName:</td>
+                <td>{{list.username}}</td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>{{list.company.name}}</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>{{list.phone}}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{list.email}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center"> 
+                    {{list.id}}
+                    <input type="button" value="View todo" class="btn btn-primary" (click)="viewTodo('todo')"/>      
+                </td>
+            </tr>
+        </table>
 
+        <!--        <div class="form-group">
+                    Id: {{list.id}}
+                </div>
+                <div class="form-group">
+                    Name: {{list.name}}
+                </div>
+                <div class="form-group">
+                    UserName: {{list.username}}
+                </div>
+                <div class="form-group">
+                    Company: {{list.company.name}}
+                </div>
+                <div class="form-group">
+                    Phone: {{list.phone}}
+                </div>
+                <div class="form-group">
+                    Email: {{list.email}}
+                </div>-->
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
